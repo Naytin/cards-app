@@ -15,7 +15,6 @@ export const PATH = {
     RESET_PASSWORD: "/reset-password",
     NEW_PASSWORD: "/new-password",
     TEST: "/test",
-    "404": "/404"
 }
 
 function Routes() {
@@ -28,7 +27,7 @@ function Routes() {
             <Route path={PATH.RESET_PASSWORD} render={() => <ResetPassword/>}/>
             <Route path={PATH.NEW_PASSWORD} render={() => <NewPassword/>}/>
             <Route path={PATH.TEST} render={() => <Test/>}/>
-            <Route path={PATH['404']} render={() => <Error404/>}/>
+            <Route render={() => <Error404/>}/>
         </Switch>
     );
 }
