@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/cards-app/static/css/main.6424c698.chunk.css",
-    "main.js": "/cards-app/static/js/main.b7b3e251.chunk.js",
-    "main.js.map": "/cards-app/static/js/main.b7b3e251.chunk.js.map",
-    "runtime-main.js": "/cards-app/static/js/runtime-main.d956f12f.js",
-    "runtime-main.js.map": "/cards-app/static/js/runtime-main.d956f12f.js.map",
-    "static/js/2.5668ef0d.chunk.js": "/cards-app/static/js/2.5668ef0d.chunk.js",
-    "static/js/2.5668ef0d.chunk.js.map": "/cards-app/static/js/2.5668ef0d.chunk.js.map",
-    "static/js/3.a463553f.chunk.js": "/cards-app/static/js/3.a463553f.chunk.js",
-    "static/js/3.a463553f.chunk.js.map": "/cards-app/static/js/3.a463553f.chunk.js.map",
+    "main.css": "/cards-app/static/css/main.c62adf5a.chunk.css",
+    "main.js": "/cards-app/static/js/main.6ecc0890.chunk.js",
+    "main.js.map": "/cards-app/static/js/main.6ecc0890.chunk.js.map",
+    "runtime-main.js": "/cards-app/static/js/runtime-main.61da3250.js",
+    "runtime-main.js.map": "/cards-app/static/js/runtime-main.61da3250.js.map",
+    "static/js/2.df166d63.chunk.js": "/cards-app/static/js/2.df166d63.chunk.js",
+    "static/js/2.df166d63.chunk.js.map": "/cards-app/static/js/2.df166d63.chunk.js.map",
+    "static/js/3.be7a31d2.chunk.js": "/cards-app/static/js/3.be7a31d2.chunk.js",
+    "static/js/3.be7a31d2.chunk.js.map": "/cards-app/static/js/3.be7a31d2.chunk.js.map",
     "index.html": "/cards-app/index.html",
-    "static/css/main.6424c698.chunk.css.map": "/cards-app/static/css/main.6424c698.chunk.css.map",
-    "static/js/2.5668ef0d.chunk.js.LICENSE.txt": "/cards-app/static/js/2.5668ef0d.chunk.js.LICENSE.txt",
+    "static/css/main.c62adf5a.chunk.css.map": "/cards-app/static/css/main.c62adf5a.chunk.css.map",
+    "static/js/2.df166d63.chunk.js.LICENSE.txt": "/cards-app/static/js/2.df166d63.chunk.js.LICENSE.txt",
     "static/media/404.41d99d1f.jpg": "/cards-app/static/media/404.41d99d1f.jpg",
-    "static/media/App.scss": "/cards-app/static/media/BalooBhai-Regular.a19151f3.ttf"
+    "static/media/App.scss": "/cards-app/static/media/BalooBhai-Regular.a19151f3.ttf",
+    "static/media/Spinner-1s-200px.6f589e28.gif": "/cards-app/static/media/Spinner-1s-200px.6f589e28.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.d956f12f.js",
-    "static/js/2.5668ef0d.chunk.js",
-    "static/css/main.6424c698.chunk.css",
-    "static/js/main.b7b3e251.chunk.js"
+    "static/js/runtime-main.61da3250.js",
+    "static/js/2.df166d63.chunk.js",
+    "static/css/main.c62adf5a.chunk.css",
+    "static/js/main.6ecc0890.chunk.js"
   ]
 }
