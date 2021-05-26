@@ -1,0 +1,12 @@
+.SuperInput {
+    padding: 1px 5px;
+    border: 2px solid #1df74c87;
+    border-radius: 3px;
+    color: black;
+    transition: all 0.3s linear;
+    &:hover {
+        background-color: #1df74c30;
+        color: #6b6b6b;
+        border: 2px solid #1df74c;
+    }
+}

@@ -1,9 +1,17 @@
 import {combineReducers, createStore} from "redux";
-import authReducer from "../reducers/authReduce";
+import authReducer from "../reducers/authReducer";
+import registrationReducer from "../reducers/registrationReducer";
+import resetUserPasswordReducer from "../reducers/resetPasswordReducer";
+import newUserPasswordReducer from "../reducers/newPasswordReducer";
+import profileReducer from "../reducers/profileReducer";
 
 
 let reducers = combineReducers({
     auth: authReducer,
+    registration: registrationReducer,
+    resetPassword: resetUserPasswordReducer,
+    newPassword: newUserPasswordReducer,
+    profile: profileReducer
 })
 
 

@@ -27,7 +27,7 @@ function Routes() {
             <Route path={PATH.RESET_PASSWORD} render={() => <ResetPassword/>}/>
             <Route path={PATH.NEW_PASSWORD} render={() => <NewPassword/>}/>
             <Route path={PATH.TEST} render={() => <Test/>}/>
-            <Route render={() => <Error404/>}/>
+            <Route render={() => <Error404/>}/>{/*Если ни один путь не совпадает, рендерит страницу 404*/}
         </Switch>
     );
 }
