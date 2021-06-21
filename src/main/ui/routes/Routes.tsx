@@ -6,7 +6,8 @@ import Profile from "../pages/Profile/Profile";
 import Registration from "../pages/Login/Registration";
 import ResetPassword from "../pages/Login/ResetPassword";
 import NewPassword from "../pages/Login/NewPassword";
-import Test from "../pages/Tests/Test";
+import SuperComponents from '../pages/SuperComponents/SuperComponents';
+
 
 export const PATH = {
     LOGIN: "/login",
@@ -26,7 +27,7 @@ function Routes() {
             <Route path={PATH.PROFILE} render={() => <Profile/>}/>
             <Route path={PATH.RESET_PASSWORD} render={() => <ResetPassword/>}/>
             <Route path={PATH.NEW_PASSWORD} render={() => <NewPassword/>}/>
-            <Route path={PATH.TEST} render={() => <Test/>}/>
+            <Route path={PATH.TEST} render={() => <SuperComponents/>}/>
             <Route render={() => <Error404/>}/>{/*Если ни один путь не совпадает, рендерит страницу 404*/}
         </Switch>
     );

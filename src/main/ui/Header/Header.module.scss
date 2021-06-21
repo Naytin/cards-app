@@ -1,7 +1,7 @@
 @import '../scss/vars';
 
 .list {
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     li {
@@ -10,12 +10,12 @@
             padding: 4px 7px;
             border-radius: 4px;
             background-color: $accent;
-            font-weight: 600;
+            font-weight: 400;
             border: 3px solid transparent;
         }
         .active {
             transition: all 0.3s ease-in;
-            color: $light;
+            color: $dark;
             border: 3px solid $primary;
         }
         transition: all 0.3s ease-in;
