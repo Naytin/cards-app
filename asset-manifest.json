@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cards-app/static/css/main.9a739ded.chunk.css",
-    "main.js": "/cards-app/static/js/main.aececab2.chunk.js",
-    "main.js.map": "/cards-app/static/js/main.aececab2.chunk.js.map",
+    "main.css": "/cards-app/static/css/main.0e19d6a9.chunk.css",
+    "main.js": "/cards-app/static/js/main.a8795115.chunk.js",
+    "main.js.map": "/cards-app/static/js/main.a8795115.chunk.js.map",
     "runtime-main.js": "/cards-app/static/js/runtime-main.e2392c77.js",
     "runtime-main.js.map": "/cards-app/static/js/runtime-main.e2392c77.js.map",
     "static/js/2.d89cb16b.chunk.js": "/cards-app/static/js/2.d89cb16b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.b8090f56.chunk.js": "/cards-app/static/js/3.b8090f56.chunk.js",
     "static/js/3.b8090f56.chunk.js.map": "/cards-app/static/js/3.b8090f56.chunk.js.map",
     "index.html": "/cards-app/index.html",
-    "static/css/main.9a739ded.chunk.css.map": "/cards-app/static/css/main.9a739ded.chunk.css.map",
+    "static/css/main.0e19d6a9.chunk.css.map": "/cards-app/static/css/main.0e19d6a9.chunk.css.map",
     "static/js/2.d89cb16b.chunk.js.LICENSE.txt": "/cards-app/static/js/2.d89cb16b.chunk.js.LICENSE.txt",
     "static/media/404.41d99d1f.jpg": "/cards-app/static/media/404.41d99d1f.jpg",
     "static/media/App.scss": "/cards-app/static/media/BalooBhai-Regular.a19151f3.ttf",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.e2392c77.js",
     "static/js/2.d89cb16b.chunk.js",
-    "static/css/main.9a739ded.chunk.css",
-    "static/js/main.aececab2.chunk.js"
+    "static/css/main.0e19d6a9.chunk.css",
+    "static/js/main.a8795115.chunk.js"
   ]
 }
