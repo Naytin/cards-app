@@ -37,7 +37,7 @@ const SuperComponents = () => {
     return (<div className={s.wrapper}>
             <h1>ALL Components</h1>
             <div><SuperButton onClick={click}>click me</SuperButton></div>
-            <div><Button style={{color: '#7d7878'}}>Button</Button></div>
+            <div><Button >Button</Button></div>
             <div><SuperInputText/></div>
             <div><SuperCheckbox/></div>
             <div><SuperEditableSpan value={value} onChange={changeValue}/></div>
