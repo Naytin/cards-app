@@ -8,7 +8,7 @@ import SuperRange from "../../common/c7-SuperRange/SuperRange";
 // import SuperDoubleRange from "../../common/c8-SuperDoubleRange/SuperDoubleRange";
 import Preloader from "../../common/preloader/Preloader";
 import SuperEditableSpan from "../../common/c4-SuperEditableSpan/SuperEditableSpan";
-import MessageInform from "../../common/MessageInform/MessageInform";
+import MessageInform from "../../common/MessageError/ErrorMessage";
 import Button from "../../common/Button/Button";
 import s from './SuperComponents.module.scss'
 

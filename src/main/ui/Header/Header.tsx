@@ -13,15 +13,18 @@ const initialState = [
 ]
 
 const Header = () => {
-    const link = initialState.map((l,i) => {
+
+    const link = initialState.map((l, i) => {
         return <li key={i}><NavLink activeClassName={s.active} to={l.link}>{l.link.slice(1)}</NavLink></li>
     })
+
     return (
-        <>
+        <div className={s.wrapper}>
+            <h3 className={s.title}>CARDS APP</h3>
             <ul className={s.list}>
                 {link}
             </ul>
-        </>
+        </div>
     )
 }
 

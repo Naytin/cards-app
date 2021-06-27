@@ -7,7 +7,6 @@ import Routes from "./routes/Routes";
 function App() {
     return (
         <div className="App">
-            <h1>CARDS-APP</h1>
             <HashRouter>
                 <Header/>
                 <Routes/>

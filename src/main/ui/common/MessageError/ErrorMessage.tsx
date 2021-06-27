@@ -1,9 +1,8 @@
 import React, { HTMLAttributes} from 'react'
-import s from './MessageInform.module.scss'
+import s from './ErrorMessage.module.scss'
 
 
-
-const MessageInform: React.FC<HTMLAttributes<HTMLDivElement>> = React.memo(({
+const ErrorMessage: React.FC<HTMLAttributes<HTMLDivElement>> = React.memo(({
                                       className,
                                       ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
                                   }) => {
@@ -12,4 +11,4 @@ const MessageInform: React.FC<HTMLAttributes<HTMLDivElement>> = React.memo(({
     return <div className={finalClassName} {...restProps}/>
 })
 
-export default MessageInform
+export default ErrorMessage
