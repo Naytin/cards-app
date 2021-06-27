@@ -1,13 +1,13 @@
 @import 'scss/vars';
 
 .App {
+  position: relative;
   margin: 0 auto;
   font-family: $default-font;
-  color: $dark;
+  min-height: 100vh;
 }
-
 a:active {
-  color: $dark;
+  color: $light;
 }
 
 a {

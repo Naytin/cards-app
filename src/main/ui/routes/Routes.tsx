@@ -1,11 +1,11 @@
 import React from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
-import Login from "../pages/Login/Login";
+import Login from "../pages/Auth/Login/Login";
 import Error404 from "../pages/404/Error404";
 import Profile from "../pages/Profile/Profile";
-import Registration from "../pages/Login/Registration";
-import ResetPassword from "../pages/Login/ResetPassword";
-import NewPassword from "../pages/Login/NewPassword";
+import Registration from "../pages/Auth/Registration/Registration";
+import ResetPassword from "../pages/Auth/RecoveryPassword/RecoveryPassword";
+import NewPassword from "../pages/Auth/NewPassword/NewPassword";
 import SuperComponents from '../pages/SuperComponents/SuperComponents';
 
 
