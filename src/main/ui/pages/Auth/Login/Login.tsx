@@ -57,7 +57,6 @@ const Login = () => {
 
     return (
             <div className={style.form__block}>
-                <h3 className={style.from__block_title}>It-incubator</h3>
                 <p className={style.form__block_text}>Sign In</p>
                 <div className={style.form__block_content}>
                     <form
