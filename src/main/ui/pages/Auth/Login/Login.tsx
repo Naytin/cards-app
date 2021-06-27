@@ -19,9 +19,11 @@ type FormikErrorType = {
 }
 
 const Login = () => {
+    const isFetching = useSelector<AppStoreType>(state => state.app.isFetching)
     const isAuth = useSelector<AppStoreType>(state => state.auth.isAuth)
     const [show, setShow] = useState(true)
     const dispatch = useDispatch()
+    console.log(!!isFetching)
 
 
     const formik = useFormik({
@@ -100,7 +102,7 @@ const Login = () => {
                         </SuperCheckbox>
                         <div className={style.button__group}>
                             <NavLink to={PATH.NEW_PASSWORD} className={`${style.form__link} ${style.forgot}`}>Forgot Password?</NavLink>
-                            <Button style={{width: '70%', borderRadius: '20px'}}  type="submit" name="form_login_submit" >Login</Button>
+                            <Button style={{width: '70%', borderRadius: '20px'}} disabled={!!isFetching}  type="submit" name="form_login_submit" >Login</Button>
                             <p className={style.form__text}>Don’t have an account?</p>
                             <NavLink to={PATH.REGISTRATION} className={`${style.form__link } ${style.signUp}`}>Sign Up</NavLink>
                         </div>

@@ -5,9 +5,11 @@ import resetUserPasswordReducer from "../reducers/resetPasswordReducer";
 import newUserPasswordReducer from "../reducers/newPasswordReducer";
 import profileReducer from "../reducers/profileReducer";
 import thunk from 'redux-thunk'
+import {appReducer} from "../reducers/appReducer";
 
 
 let reducers = combineReducers({
+    app: appReducer,
     auth: authReducer,
     registration: registrationReducer,
     resetPassword: resetUserPasswordReducer,

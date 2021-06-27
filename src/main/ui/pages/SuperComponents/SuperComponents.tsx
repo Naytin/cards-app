@@ -11,6 +11,7 @@ import SuperEditableSpan from "../../common/c4-SuperEditableSpan/SuperEditableSp
 import MessageInform from "../../common/MessageError/ErrorMessage";
 import Button from "../../common/Button/Button";
 import s from './SuperComponents.module.scss'
+import Loader from "../../common/Loader/Loader";
 
 
 const SuperComponents = () => {
@@ -46,10 +47,11 @@ const SuperComponents = () => {
             <div><SuperRange
                 onChangeRange={onChangeRange}
                 value={min}
-                // сделать так чтоб value1 изменялось
             /></div>
             <div style={{position: 'relative', display: 'flex', justifyContent: 'center', marginBottom: '100px'}}><MessageInform>Error Message</MessageInform></div>
-
+            <div>
+                <Loader/>
+            </div>
             {/*<SuperDoubleRange*/}
             {/*    // value={range}*/}
             {/*    range={range}*/}
