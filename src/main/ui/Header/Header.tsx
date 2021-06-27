@@ -2,27 +2,35 @@ import React from 'react'
 import {NavLink} from "react-router-dom";
 import s from './Header.module.scss'
 import {PATH} from "../routes/Routes";
+import {logoutThunk} from "../../bll/reducers/authReducer";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "../../bll/store/store";
 
-const initialState = [
-    {link: PATH.LOGIN, active: true},
-    {link: PATH.REGISTRATION, active: false},
-    {link: PATH.PROFILE, active: false},
-    {link: PATH.RESET_PASSWORD, active: false},
-    {link: PATH.NEW_PASSWORD, active: false},
-    {link: PATH.TEST, active: false},
-]
 
 const Header = () => {
+    const isAuth = useSelector<AppStoreType>(state => state.auth.isAuth)
+    const dispatch = useDispatch()
 
-    const link = initialState.map((l, i) => {
-        return <li key={i}><NavLink activeClassName={s.active} to={l.link}>{l.link.slice(1)}</NavLink></li>
-    })
+    const handleLogout = () => {
+        dispatch(logoutThunk())
+    }
 
     return (
         <div className={s.wrapper}>
             <h3 className={s.title}>CARDS APP</h3>
             <ul className={s.list}>
-                {link}
+                <li>
+                    <NavLink activeClassName={s.active} to={PATH.PROFILE}>Profile</NavLink>
+                </li>
+                <li>
+                    {isAuth ?
+                        <NavLink activeClassName={s.active} to={PATH.LOGIN} onClick={handleLogout}>logout</NavLink> :
+                        <NavLink activeClassName={s.active} to={PATH.LOGIN}>Login</NavLink>}
+                </li>
+                <li><NavLink activeClassName={s.active} to={PATH.REGISTRATION}>Registration</NavLink></li>
+                <li><NavLink activeClassName={s.active} to={PATH.RESET_PASSWORD}>Restore password</NavLink></li>
+                <li><NavLink activeClassName={s.active} to={PATH.NEW_PASSWORD}>New password</NavLink></li>
+                <li><NavLink activeClassName={s.active} to={PATH.TEST}>Tests</NavLink></li>
             </ul>
         </div>
     )

@@ -1,12 +1,15 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import SuperCheckbox from '../../../common/c3-SuperCheckbox/SuperCheckbox'
 import style from './Login.module.scss'
 import ErrorMessage from "../../../common/MessageError/ErrorMessage";
-import { NavLink } from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 import {PATH} from "../../../routes/Routes";
 import { useFormik } from 'formik';
 import eye from '../../../assets/images/eye.svg'
 import Button from "../../../common/Button/Button";
+import {useDispatch, useSelector} from "react-redux";
+import {loginThunk} from "../../../../bll/reducers/authReducer";
+import {AppStoreType} from "../../../../bll/store/store";
 
 
 type FormikErrorType = {
@@ -16,7 +19,10 @@ type FormikErrorType = {
 }
 
 const Login = () => {
+    const isAuth = useSelector<AppStoreType>(state => state.auth.isAuth)
     const [show, setShow] = useState(true)
+    const dispatch = useDispatch()
+
 
     const formik = useFormik({
         initialValues: {
@@ -39,7 +45,7 @@ const Login = () => {
             return errors;
         },
         onSubmit: values => {
-            // dispatch(loginThunk(values))
+            dispatch(loginThunk(values))
             formik.resetForm()
         },
     });
@@ -49,11 +55,9 @@ const Login = () => {
     }
 
     // if isAuth true redirect to profile page
-    // if(isAuth) {
-    //     return <Redirect to={PATH.PROFILE}/>
-    // }
-
-
+    if(isAuth) {
+        return <Redirect to={PATH.PROFILE}/>
+    }
 
     return (
             <div className={style.form__block}>
