@@ -1,11 +1,11 @@
-import {combineReducers, createStore, applyMiddleware} from "redux";
-import authReducer from "../reducers/authReducer";
+import {combineReducers, createStore, applyMiddleware, Action} from "redux";
+import authReducer, {TLoginReducerActions} from "../reducers/authReducer";
 import registrationReducer from "../reducers/registrationReducer";
 import resetUserPasswordReducer from "../reducers/resetPasswordReducer";
 import newUserPasswordReducer from "../reducers/newPasswordReducer";
 import profileReducer from "../reducers/profileReducer";
-import thunk from 'redux-thunk'
-import {appReducer} from "../reducers/appReducer";
+import thunk, { ThunkAction } from 'redux-thunk'
+import {appReducer, TAppReducerActions} from "../reducers/appReducer";
 
 
 let reducers = combineReducers({
@@ -28,3 +28,8 @@ export default store
 
 // @ts-ignore
 window.store = store; // for dev
+
+export type TAppActions = TAppReducerActions | TLoginReducerActions
+
+//* Common thunk type ===============================================================================================>>
+export type TBaseThunk<A extends Action = TAppActions, R = void> = ThunkAction<R, AppStoreType, unknown, A>

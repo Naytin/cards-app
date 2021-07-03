@@ -16,8 +16,15 @@ export const authAPI = {
     logout() {
         return instance.delete('auth/me', {})
     },
+    changeData(userData: UserData) {
+        return instance.put('auth/me', userData)
+    },
 }
 
+export interface UserData {
+    name?: string
+    avatar?: string
+}
 
 interface ResponseUserData {
     _id: string

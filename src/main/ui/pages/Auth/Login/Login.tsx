@@ -23,7 +23,6 @@ const Login = () => {
     const isAuth = useSelector<AppStoreType>(state => state.auth.isAuth)
     const [show, setShow] = useState(true)
     const dispatch = useDispatch()
-    console.log(!!isFetching)
 
 
     const formik = useFormik({

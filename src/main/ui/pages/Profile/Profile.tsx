@@ -8,13 +8,13 @@ import {Redirect} from "react-router-dom";
 
 const Profile = () => {
     const isAuth = useSelector<AppStoreType>(state => state.auth.isAuth)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    useEffect(() => {
-        if(!isAuth) {
-            dispatch(authThunk())
-        }
-    },[])
+    // useEffect(() => {
+    //     if(!isAuth) {
+    //         dispatch(authThunk())
+    //     }
+    // },[])
 
     if(!isAuth) {
         return <Redirect to={PATH.LOGIN}/>
