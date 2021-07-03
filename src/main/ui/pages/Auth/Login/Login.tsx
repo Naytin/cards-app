@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import SuperCheckbox from '../../../common/c3-SuperCheckbox/SuperCheckbox'
 import style from './Login.module.scss'
 import ErrorMessage from "../../../common/MessageError/ErrorMessage";
@@ -6,6 +6,7 @@ import {NavLink, Redirect} from 'react-router-dom';
 import {PATH} from "../../../routes/Routes";
 import { useFormik } from 'formik';
 import eye from '../../../assets/images/eye.svg'
+import eyeOff from '../../../assets/images/eyeOff.svg'
 import Button from "../../../common/Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {loginThunk} from "../../../../bll/reducers/authReducer";
@@ -90,7 +91,7 @@ const Login = () => {
                                 className={style.form__style_input}
                                 {...formik.getFieldProps('password')}
                             />
-                            <img className={style.input__eye} src={eye} alt="eye" onClick={handleShowPassword}/>
+                            <img className={style.input__eye} src={show ? eyeOff :eye} alt="eye" onClick={handleShowPassword}/>
                             {formik.touched.password && formik.errors.password ?
                                 <ErrorMessage>{formik.errors.password}</ErrorMessage> : null}
 

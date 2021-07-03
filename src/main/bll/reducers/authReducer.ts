@@ -60,7 +60,6 @@ export const authThunk = (): ThunkType => dispatch => {
                 dispatch(setUserData({email, _id, name, avatar, publicCardPacksCount}))
         }).catch(error => {
             dispatch(setIsInitialized(false))
-            dispatch(setAppError(error.response.data.error))
             dispatch(setIsFetching(false))
     })
 }
