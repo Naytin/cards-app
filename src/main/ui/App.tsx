@@ -11,6 +11,9 @@ import ErrorMessage from "./common/MessageError/ErrorMessage";
 function App() {
     const isFetching = useSelector<AppStoreType>(state => state.app.isFetching)
     const error = useSelector<AppStoreType, string | null>(state => state.app.error)
+
+
+
     return (
         <div className="App">
             <HashRouter>

@@ -34,20 +34,6 @@ export const loginThunk = (data: UserLoginDataType): ThunkType => dispatch => {
     dispatch(setIsFetching(true))
     authAPI.login(data)
         .then(res => {
-            if (res.status === 200) {
-                dispatch(authThunk())
-            } else {
-                console.log('something went wrong', res)
-            }
-        }).catch(error => {
-            dispatch(setAppError(error.response.data.error))
-            dispatch(setIsFetching(false))
-    })
-}
-export const authThunk = (): ThunkType => dispatch => {
-    authAPI.auth()
-        .then(res => {
-            if (res.status === 200) {
                 let {email,
                     _id,
                     name,
@@ -57,7 +43,24 @@ export const authThunk = (): ThunkType => dispatch => {
                 dispatch(setAppError(null))
                 dispatch(setIsFetching(false))
                 dispatch(setAuthUserDataAction({email, _id, name, avatar, publicCardPacksCount, isAuth}))
-            }
+
+        }).catch(error => {
+            dispatch(setAppError(error.response.data.error))
+            dispatch(setIsFetching(false))
+    })
+}
+export const authThunk = (): ThunkType => dispatch => {
+    authAPI.auth()
+        .then(res => {
+                let {email,
+                    _id,
+                    name,
+                    avatar,
+                    publicCardPacksCount} = res.data
+                let isAuth = true
+                dispatch(setAppError(null))
+                dispatch(setIsFetching(false))
+                dispatch(setAuthUserDataAction({email, _id, name, avatar, publicCardPacksCount, isAuth}))
         }).catch(error => {
             dispatch(setAppError(error.response.data.error))
             dispatch(setIsFetching(false))
@@ -66,7 +69,6 @@ export const authThunk = (): ThunkType => dispatch => {
 export const logoutThunk = (): ThunkType => dispatch => {
     authAPI.logout()
         .then(res => {
-            if (res.status === 200) {
                 let isAuth = false
                 let email = null
                 let _id = null
@@ -75,7 +77,6 @@ export const logoutThunk = (): ThunkType => dispatch => {
                 let publicCardPacksCount = null
                 dispatch(setAppError(null))
                 dispatch(setAuthUserDataAction({email, _id, name, avatar, publicCardPacksCount, isAuth}))
-            }
         }).catch(error => {
             dispatch(setAppError(error.response.data.error))
             dispatch(setIsFetching(false))

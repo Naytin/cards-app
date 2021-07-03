@@ -1,5 +1,3 @@
-import {ThunkAction} from "redux-thunk";
-import {AppStoreType} from "../store/store";
 
 const initialState = {
     isFetching: false,
@@ -33,4 +31,3 @@ export type TState = typeof initialState
 export type ErrorMessageType = string | null
 export type TAppReducerActions = ReturnType<typeof setIsFetching> | ReturnType<typeof setAppError>
 
-type TThunk = ThunkAction<void, AppStoreType,unknown, TAppReducerActions>
